@@ -6,7 +6,8 @@
     "gh-pages": "^1.0.0",
     "netlify-lambda": "^0.4.0",
     "react": "^15.6.1",
-    "react-dom": "^15.6.1"
+    "react-dom": "^15.6.1",
+    "stripe": "^6.2.1"
   },
   "devDependencies": {
     "react-scripts": "1.0.11"
