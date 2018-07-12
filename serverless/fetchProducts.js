@@ -1,6 +1,6 @@
 const stripe = require('stripe')(process.env.sk_test_zhSGHkJ4fRgSAcZLsnJ6zbd0);
 
-module.exports.handler = (event, context, callback) => {
+exports.handler = (event, context, callback) => {
   return stripe.products.list(
       {limit: 10}).then((products) => {
     const response = {
