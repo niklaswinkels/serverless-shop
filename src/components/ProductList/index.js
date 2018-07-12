@@ -1,5 +1,5 @@
 import React, {Component} from "react";
-import config from "../../config.js";
+import config from "../../configuration.js";
 
 import Product from "../Product";
 

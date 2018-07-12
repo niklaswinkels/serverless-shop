@@ -1,6 +1,6 @@
 const config = {
   stripe: {
-    apiKey: 'pk_test_RcuyF81gRAqODQ3e1HJooOpN',
+    apiKey: 'STRIPE_PUBLISHABLE_KEY',
     checkoutUrl: 'https://cocky-swartz-5cef73.netlify.com/.netlify/functions/createCharge',
     productsUrl: 'https://cocky-swartz-5cef73.netlify.com/.netlify/functions/fetchProducts',
     currency: 'EUR',
