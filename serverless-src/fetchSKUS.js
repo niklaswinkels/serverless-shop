@@ -1,15 +1,15 @@
 const stripe = require('stripe')(process.env.STRIPE_SECRET_KEY);
 
 exports.handler = (event, context, callback) => {
-  return stripe.products.list(
-      {limit: 10}).then((products) => {
+  return stripe.skus.list(
+      {limit: 10}).then((skus) => {
     const response = {
       statusCode: 200,
       headers: {
         'Access-Control-Allow-Origin': '*',
       },
       body: JSON.stringify({
-        data: products.data
+        data: skus.data
       }),
     };
     callback(null, response);

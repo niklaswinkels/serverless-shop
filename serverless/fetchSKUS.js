@@ -60,7 +60,7 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 65);
+/******/ 	return __webpack_require__(__webpack_require__.s = 66);
 /******/ })
 /************************************************************************/
 /******/ ([
@@ -3720,7 +3720,8 @@ module.exports = Webhook;
 
 /***/ }),
 /* 64 */,
-/* 65 */
+/* 65 */,
+/* 66 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -3729,14 +3730,14 @@ module.exports = Webhook;
 const stripe = __webpack_require__(11)(process.env.STRIPE_SECRET_KEY);
 
 exports.handler = (event, context, callback) => {
-  return stripe.products.list({ limit: 10 }).then(products => {
+  return stripe.skus.list({ limit: 10 }).then(skus => {
     const response = {
       statusCode: 200,
       headers: {
         'Access-Control-Allow-Origin': '*'
       },
       body: JSON.stringify({
-        data: products.data
+        data: skus.data
       })
     };
     callback(null, response);
